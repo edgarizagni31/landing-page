@@ -1,0 +1,70 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html{
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Alata', sans-serif;
+}
+
+/*font-family: 'Alata', sans-serif;*/
+
+.header {
+  background-image: url('../images/desktop/image-hero.jpg');          
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--White);
+  height: 100vh;
+  padding: 40px;
+  position: relative;
+}
+
+.header__navbar{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.navbar__title{
+  font-size: 32px;
+  margin: 0;
+}
+
+
+.navbar__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-content: flex-end;
+}
+
+.navbar__menu p {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.header__desc {
+  border: 1px solid var(--White);
+  width: 400px;
+  font-size: 45px;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 20px;
+  position: absolute;
+  top: 250px;
+}
