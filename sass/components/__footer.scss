@@ -6,11 +6,28 @@
 .footer {
   background-color: $Black;
   color: $White;
-  height: 70px;
+  height: 100px;
+  padding-left: 120px;
+  padding-top: 20px;
   width: 100%;
+  position: relative;
 }
 
 .footer__menu {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  bottom: 20px;
+}
+
+.footer__menu {
+  p {
+    margin-right: 20px;
+  }
+}
+
+.footer__copy{
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
 }
