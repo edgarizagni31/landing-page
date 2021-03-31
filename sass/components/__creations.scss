@@ -1,0 +1,54 @@
+@import '../utils/_variables';
+
+/*
+  *********CREATIONS********
+*/
+
+.creations {
+  margin-bottom: 120px;
+  padding-left: 120px;
+}
+
+/*
+  *********HEADER**********
+*/
+
+.creations__header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.header__title {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.header__btn {
+  height: 32px;
+  position: absolute;
+  right: 30px;
+  text-transform: uppercase;
+  top: 0;
+  width: 120px;
+}
+
+.creations__img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.creations section {
+  position: relative;
+}
+
+.creations section p {
+  color: $White;
+  font-size: 17px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 10px;
+  bottom: 60px;
+}

@@ -1,0 +1,46 @@
+@import '../utils/_variables';
+/*
+  *********ABOUT********
+*/
+
+.about {
+  margin-top: 50px;
+  margin-bottom: 90px;
+  padding-left: 120px;
+  position: relative;
+}
+
+/*
+  *********IMAGES*********
+*/
+
+.about__img {
+  margin-top: 20px;
+  width: 730px;
+  height: 500px;
+}
+
+/*
+  *********TEXT*********
+*/
+
+.about__text {
+  position: absolute;
+  background-color: $White;
+  width: 580px;
+  height: 300px;
+  padding: 70px;
+  top: 200px;
+  left: 680px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.text__title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.text__desc {
+  font-size: 16px;
+}

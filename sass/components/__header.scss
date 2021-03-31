@@ -1,0 +1,60 @@
+@import '../utils/_variables';
+
+/*
+  *********HEADER***********
+*/
+
+.header {
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $White;
+  height: 100vh;
+  padding-top: 50px;
+  padding-left: 140px;
+  padding-right: 50px;
+  position: relative;
+}
+
+/*
+  *********NAVBAR*********
+*/
+
+.header__navbar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.navbar__title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.navbar__menu {
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-bottom: 7px;
+}
+
+.navbar__menu a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/*
+  *********DESCRIPTION*********
+*/
+
+.header__desc {
+  border: 1px solid $White;
+  width: 400px;
+  font-size: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 20px;
+  position: absolute;
+  top: 250px;
+}

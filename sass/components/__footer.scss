@@ -1,0 +1,16 @@
+@import '../utils/_variables';
+/*
+  *********FOOTER********
+*/
+
+.footer {
+  background-color: $Black;
+  color: $White;
+  height: 70px;
+  width: 100%;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: row;
+}
