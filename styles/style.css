@@ -14,8 +14,8 @@
 }
 
 body,
-html{
-  font-family: 'Alata', sans-serif;
+html {
+  font-family: "Alata", sans-serif;
   height: 100vh;
   overflow-x: hidden;
   width: 100vw;
@@ -26,7 +26,7 @@ html{
 */
 
 .header {
-  background-image: url('../images/desktop/image-hero.jpg');          
+  background-image: url("../images/desktop/image-hero.jpg");
   background-origin: border-box;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,13 +38,17 @@ html{
   position: relative;
 }
 
-.header__navbar{
+/*
+  *********NAVBAR*********
+*/
+
+.header__navbar {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
 }
 
-.navbar__title{
+.navbar__title {
   font-size: 32px;
   margin: 0;
 }
@@ -55,18 +59,21 @@ html{
   margin-bottom: 7px;
 }
 
-
 .navbar__menu a {
   display: inline-block;
   margin-right: 10px;
   font-size: 16px;
 }
 
+/*
+  *********DESCRIPTION*********
+*/
+
 .header__desc {
   border: 1px solid var(--White);
   width: 400px;
   font-size: 45px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   padding: 20px;
   position: absolute;
@@ -78,17 +85,25 @@ html{
 */
 
 .about {
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 90px;
   padding-left: 120px;
   position: relative;
 }
 
+/*
+  *********IMAGES*********
+*/
+
 .about__img {
   margin-top: 20px;
-  background-image: url('../images/desktop/image-interactive.jpg');
   width: 730px;
   height: 500px;
 }
+
+/*
+  *********TEXT*********
+*/
 
 .about__text {
   position: absolute;
@@ -97,12 +112,12 @@ html{
   height: 300px;
   padding: 70px;
   top: 200px;
-  left:  680px;
-  font-family: 'Josefin Sans', sans-serif;
+  left: 680px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .text__title {
-  font-size: 40px ;
+  font-size: 40px;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
@@ -111,23 +126,48 @@ html{
   font-size: 16px;
 }
 
+/*
+  *********CREATIONS********
+*/
+
 .creations {
+  margin-bottom: 120px;
   padding-left: 120px;
 }
 
-.creations__img{
+/*
+  *********HEADER**********
+*/
+
+.creations__header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.header__title {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.header__btn {
+  height: 32px;
+  position: absolute;
+  right: 30px;
+  text-transform: uppercase;
+  top: 0;
+  width: 120px;
+}
+
+.creations__img {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .creations section {
   position: relative;
-}
-
-.creations section div {
-  width: 256px;
-  height: 450px;
 }
 
 .creations section p {
@@ -139,34 +179,18 @@ html{
   bottom: 60px;
 }
 
-.deep-img {
-  background-image: url('../images/desktop/image-deep-earth.jpg');
+/*
+  *********FOOTER********
+*/  
+
+.footer {
+  background-color: var(--Black);
+  color: var(--White);
+  height: 70px;
+  width: 100%;
 }
 
-.night-img {
-  background-image: url('../images/desktop/image-night-arcade.jpg');
-}
-
-.soccer-img {
-  background-image: url('../images/desktop/image-soccer-team.jpg');
-}
-
-.grid-img {
-  background-image: url('../images/desktop/image-grid.jpg');
-}
-
-.above-img {
-  background-image: url('../images/desktop/image-from-above.jpg');
-}
-
-.pocket-img {
-  background-image: url('../images/desktop/image-pocket-borealis.jpg');
-}
-
-.curiosity-img {
-  background-image: url('../images/desktop/image-curiosity.jpg');
-}
-
-.make-img {
-  background-image: url('../images/desktop/image-fisheye.jpg');
+.footer__menu {
+  display: flex;
+  flex-direction: row;
 }
