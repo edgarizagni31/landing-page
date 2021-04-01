@@ -21,8 +21,10 @@
 }
 
 .footer__menu {
-  p {
+  a {
+    color: $White;
     margin-right: 20px;
+    text-decoration: none;
   }
 }
 

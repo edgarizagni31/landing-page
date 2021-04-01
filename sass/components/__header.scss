@@ -40,8 +40,10 @@
 
 .navbar__menu a {
   display: inline-block;
-  margin-right: 10px;
   font-size: 16px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: $White;
 }
 
 /*
