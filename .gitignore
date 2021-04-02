@@ -1,4 +1,6 @@
-images
+images/
 .gitignore
-design
+design/
 style-guide.md
+node_modules/
+dist/
