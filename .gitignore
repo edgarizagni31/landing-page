@@ -1,6 +1,10 @@
-images/
-.gitignore
+#project info
 design/
 style-guide.md
+
+#build
 node_modules/
 dist/
+
+#binaries
+assets/
