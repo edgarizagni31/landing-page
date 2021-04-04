@@ -1,0 +1,10 @@
+mixin pictures( defaultUrl, responsiveUrl="", alt )
+    piture
+        source(
+            media="(max-width: 450px)"
+            srcset=responsiveUrl
+        )
+        img(
+            src=defaultUrl 
+            alt=alt
+        )

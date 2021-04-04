@@ -1,0 +1,22 @@
+include ./utils/mixins.pug 
+
+mixin card(urlDefault, urlResponsive ,title = "") 
+    section
+        +pictures(urlDefault, urlResponsive, title)
+        p=title
+
+
+article.creations#creations
+    header.creations__header
+        h2.header__title Our Creations
+        button.header__btn SeeAll
+    
+    div.creations__img
+        +card("./assets/images/desktop/image-deep-earth.jpg","./assets/images/mobile/image-deep-earth.jpg","deep earth")
+        +card("./assets/images/desktop/image-night-arcade.jpg","./assets/images/mobile/image-night-arcade.jpg","nigth arcade")
+        +card("./assets/images/desktop/image-soccer-team.jpg","./assets/images/mobile/image-soccer-team.jpg","soccer team")
+        +card("./assets/images/desktop/image-grid.jpg","./assets/images/mobile/image-grid.jpg","the grid")
+        +card("./assets/images/desktop/image-from-above.jpg","./assets/images/mobile/image-from-above.jpg","from up above vr")
+        +card("./assets/images/desktop/image-pocket-borealis.jpg","./assets/images/mobile/image-pocket-borealis.jpg","pocket borealis")
+        +card("./assets/images/desktop/image-curiosity.jpg","./assets/images/mobile/image-curiosity.jpg","the curiosity")
+        +card("./assets/images/desktop/image-fisheye.jpg","./assets/images/mobile/image-fisheye.jpg","make it fisheye")
