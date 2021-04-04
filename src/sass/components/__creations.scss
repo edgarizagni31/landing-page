@@ -5,9 +5,11 @@
 */
 
 .creations {
-  padding-top: 30px;
   margin-bottom: 120px;
-  padding-left: 120px;
+  padding: {
+    top: 30px;
+    left: 120px;
+  }
 }
 
 /*
@@ -27,13 +29,13 @@
 }
 
 .header__btn {
+  background-color: $White;
   height: 32px;
   position: absolute;
   right: 30px;
   text-transform: uppercase;
   top: 0;
   width: 120px;
-  background-color: $White;
 }
 
 .creations__img {
@@ -47,10 +49,26 @@
 }
 
 .creations section p {
+  bottom: 60px;
   color: $White;
   font-size: 17px;
-  text-transform: uppercase;
-  position: absolute;
   left: 10px;
-  bottom: 60px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 440px){
+  .creations {
+    padding: 0 2%;
+  }
+
+  .creations__img {
+    grid-template-columns: 1fr;
+  }
+
+  .creations__img {
+    img {
+      width: 96%;
+    }
+  }
 }

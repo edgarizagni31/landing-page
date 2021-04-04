@@ -1,0 +1,10 @@
+-  var menuItems = ['about','creations','support']
+
+header.header 
+    div.header__navbar 
+        h1.navbar__title LoopStudios
+        section.navbar__menu
+            each item in menuItems 
+                a(href = '#' + item)= item 
+    div.header__desc
+        p.desc__text imersive experiences that deliver

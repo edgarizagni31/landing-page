@@ -38,12 +38,17 @@
   margin-bottom: 7px;
 }
 
-.navbar__menu a {
-  display: inline-block;
-  font-size: 16px;
-  margin-right: 10px;
-  text-decoration: none;
-  color: $White;
+.navbar__menu { 
+  a {
+    color: $White;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    text: {
+      decoration: none;
+      transform: capitalize;
+    }
+  }
 }
 
 /*
