@@ -1,30 +1,39 @@
-@import '../utils/_variables';
-
-/*
-  *********HEADER***********
-*/
+@use '../utils/_variables' as variables;
 
 .header {
-  background-image: url("./assets/images/desktop/image-hero.jpg");
-  background-origin: border-box;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $White;
+  background: {
+    image: url(./assets/images/desktop/image-hero.jpg);
+    origin: border-box;
+    repeat: no-repeat;
+    size: cover; 
+  }
+  color: variables.$color-text;
   height: 100vh;
-  padding-top: 50px;
-  padding-left: 140px;
-  padding-right: 50px;
+  padding: {
+    top: 50px;
+    left: 140px;
+    right: 50px;
+  }
   position: relative;
-}
 
-/*
-  *********NAVBAR*********
-*/
+  &__navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 
-.header__navbar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  &__desc {
+    border: 1px solid variables.$color-text;
+    font: {
+      size: 45px;
+      family: "Josefin Sans", sans-serif;
+    }
+    padding: 20px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 250px;
+    width: 400px;
+  }
 }
 
 .navbar__title {
@@ -33,14 +42,8 @@
 }
 
 .navbar__menu {
-  align-self: flex-end;
-  justify-self: flex-end;
-  margin-bottom: 7px;
-}
-
-.navbar__menu { 
   a {
-    color: $White;
+    color: variables.$color-text;
     display: inline-block;
     font-size: 16px;
     margin-right: 10px;
@@ -49,19 +52,27 @@
       transform: capitalize;
     }
   }
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-bottom: 7px;
 }
 
-/*
-  *********DESCRIPTION*********
-*/
 
-.header__desc {
-  border: 1px solid $White;
-  width: 400px;
-  font-size: 45px;
-  font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
-  padding: 20px;
-  position: absolute;
-  top: 250px;
+@media screen and (max-width: 440px) {
+  .header {
+    background-image: url(./assets/images/mobile/image-hero.jpg);
+    padding: {
+      left: 2%;
+      right: 2%;
+    }
+    &__desc {
+      width: 92%;
+      height:250px;
+      top: 350px;
+    }
+  }
+
+  .navbar__menu {
+    display: none;
+  }
 }

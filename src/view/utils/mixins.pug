@@ -1,10 +1,18 @@
-mixin pictures( defaultUrl, responsiveUrl="", alt )
-    piture
+- var pathDesktop = './assets/images/desktop/' 
+- var pathMobile =  './assets/images/mobile/'
+
+mixin pictures( filename, alt )
+    picture
         source(
             media="(max-width: 450px)"
-            srcset=responsiveUrl
+            srcset=pathMobile + filename
         )
         img(
-            src=defaultUrl 
+            src=pathDesktop + filename
             alt=alt
         )
+
+mixin card(filename ,title = "") 
+    section
+        +pictures(filename, title)
+        p=title

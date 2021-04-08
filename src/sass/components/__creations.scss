@@ -1,8 +1,5 @@
-@import '../utils/_variables';
+@use '../utils/_variables' as variables;
 
-/*
-  *********CREATIONS********
-*/
 
 .creations {
   margin-bottom: 120px;
@@ -10,17 +7,29 @@
     top: 30px;
     left: 120px;
   }
-}
+  &__header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  &__img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
 
-/*
-  *********HEADER**********
-*/
-
-.creations__header {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
-  position: relative;
+  section {
+    position: relative;
+    p {
+      bottom: 30px;
+      color: variables.$color-text;
+      font-size: 17px;
+      left: 10px;
+      position: absolute;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .header__title {
@@ -29,46 +38,39 @@
 }
 
 .header__btn {
-  background-color: $White;
+  background-color: variables.$color-text;
   height: 32px;
   position: absolute;
   right: 30px;
   text-transform: uppercase;
-  top: 0;
   width: 120px;
 }
 
-.creations__img {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.creations section {
-  position: relative;
-}
-
-.creations section p {
-  bottom: 60px;
-  color: $White;
-  font-size: 17px;
-  left: 10px;
-  position: absolute;
-  text-transform: uppercase;
-}
 
 @media screen and (max-width: 440px){
   .creations {
     padding: 0 2%;
-  }
-
-  .creations__img {
-    grid-template-columns: 1fr;
-  }
-
-  .creations__img {
-    img {
-      width: 96%;
+    position: relative;
+    &__header {
+      position: initial;
+    }
+    &__img {
+      grid-template-columns: 1fr;
+      img  {
+        width: 96%;
+      } 
+      section {
+        p {
+          bottom: 10px;
+        }
+      }
     }
   }
+
+  .header__btn {
+    position: absolute;
+    bottom: -50px;
+    left: 35%;
+  }
+
 }

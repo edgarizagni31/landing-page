@@ -1,35 +1,79 @@
-@import '../utils/_variables';
-/*
-  *********FOOTER********
-*/
+@use '../utils/_variables' as variables;
 
 .footer {
-  background-color: $Black;
-  color: $White;
+  background-color: variables.$bg-black;
+  color: variables.$color-text;
+  display: grid;
+  grid-template: {
+    columns: repeat(2,1fr);
+    rows: repeat(2,1fr);
+  }
   height: 100px;
-  padding-left: 120px;
-  padding-top: 20px;
+  padding: {
+    left: 120px;
+    right: 2%;
+    top: 20px;
+  }
   width: 100%;
-  position: relative;
-}
-
-.footer__menu {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  bottom: 20px;
 }
 
 .footer__menu {
   a {
-    color: $White;
+    color: variables.$color-text;
     margin-right: 20px;
     text-decoration: none;
+    text-transform: capitalize;
+  }
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/2;
+}
+
+
+.footer__icons,
+.footer__copy {
+  grid-column: 2/-1;
+  justify-self: end;
+}
+
+.footer__icons {
+  grid-row: 1/2;
+  img {
+    margin-right: 10px;
   }
 }
 
-.footer__copy{
-  position: absolute;
-  bottom: 20px;
-  right: 40px;
+.footer__copy {
+  grid-row: 2/-1;
+}
+
+@media screen and (max-width: 440px) {
+  .footer {
+    display: block;
+    min-height: 300px;
+    text-align: center;
+    padding: {
+      top: 20px;
+      left: 0;
+      right: 0;
+    }
+  }
+  
+  .footer__title,
+  .footer__menu,
+  .footer__copy,
+  .footer__icons{
+    margin-bottom: 20px;
+  }
+
+  .footer__menu {
+    a {
+      margin: {
+        bottom: 20px;
+        right: 0;
+      };
+    }
+    flex-direction: column;
+    position: initial;
+  }
 }

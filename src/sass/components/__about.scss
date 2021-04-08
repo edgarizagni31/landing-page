@@ -1,8 +1,4 @@
-@import '../utils/_variables';
-
-/*
-  *********ABOUT********
-*/
+@use '../utils/_variables' as variables;
 
 .about {
   margin-bottom: 90px;
@@ -11,30 +7,15 @@
     top: 50px;
   }
   position: relative;
-}
-
-/*
-  *********IMAGES*********
-*/
-
-.about__img {
-  height: 500px;
-  margin-top: 20px;
-  width: 730px;
-}
-
-/*
-  *********TEXT*********
-*/
-
-.about__text {
-  background-color: $White;
-  font-family: "Josefin Sans", sans-serif;
-  height: 300px;
-  left: 680px;
-  padding: 70px;
-  position: absolute;
-  top: 250px;
+  &__text {
+    background-color: variables.$color-text;
+    font-family: "Josefin Sans", sans-serif;
+    height: 300px;
+    left: 680px;
+    padding: 70px;
+    position: absolute;
+    top: 250px;
+  }
 }
 
 .text__title {
@@ -45,4 +26,22 @@
 
 .text__desc {
   font-size: 16px;
+}
+
+@media screen and (max-width: 440px) {
+
+  .about {
+    padding: {
+      left: 2%;
+    }
+    margin-bottom: 50px;
+    img {
+      width: 96%;
+      margin-bottom: 40px;
+    }
+    &__text {
+      position: initial;
+      padding: 0;
+    }
+  }
 }

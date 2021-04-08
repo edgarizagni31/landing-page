@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pug" : "pug ./src/view/index.pug --out ./public",
-    "sass": "sass ./src/sass/main.scss ./public/styles.css"
+    "pug" : "pug ./src/view/index.pug --out ./public ",
+    "sass": "sass ./src/sass/main.scss ./public/styles.css --style compressed --watch"
   },
   "repository": {
     "type": "git",
