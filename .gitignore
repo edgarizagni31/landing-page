@@ -6,8 +6,6 @@ style-guide.md
 node_modules/
 dist/
 
-#binaries
-assets/
 
 #moment 
 package.json
