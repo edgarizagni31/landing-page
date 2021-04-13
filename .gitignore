@@ -8,3 +8,7 @@ dist/
 
 #binaries
 assets/
+
+#moment 
+package-lock.json
+package.json
