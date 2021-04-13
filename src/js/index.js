@@ -4,7 +4,7 @@ function handleMenu() {
   const displayMenu = document.getElementById("displayMenu");
   const menu = document.querySelector(".navbar__menu");
 
-  if ( !displayMenu.classList.contains('icon-close')) {
+  if ( !displayMenu.classList.contains('icon-close') ) {
     displayMenu.classList.add("icon-close");
     displayMenu.setAttribute("src", "./assets/icons/icon-close.svg");
   }else {
