@@ -4,9 +4,5 @@ style-guide.md
 
 #build
 node_modules/
-dist/
-
-
-#moment 
 package.json
 package-lock.json
