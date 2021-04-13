@@ -2,7 +2,7 @@
 design/
 style-guide.md
 
-#build
+#dev
 node_modules/
 package.json
 package-lock.json
