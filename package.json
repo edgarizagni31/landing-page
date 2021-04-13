@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pug" : "pug ./src/view/index.pug --out ./public ",
+    "pug": "pug ./src/view/index.pug --out ./public ",
     "sass": "sass ./src/sass/main.scss ./public/styles.css --style compressed --watch"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/edgarizagni31/landing-page#readme",
   "devDependencies": {
+    "animate.css": "^4.1.1",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^8.1.0",
     "css-loader": "^5.2.0",

@@ -36,6 +36,10 @@
   }
 }
 
+.display__menu {
+  display: none;
+}
+
 .navbar__title {
   font-size: 32px;
   margin: 0;
@@ -61,18 +65,67 @@
 @media screen and (max-width: 440px) {
   .header {
     background-image: url(./assets/images/mobile/image-hero.jpg);
-    padding: {
-      left: 2%;
-      right: 2%;
-    }
+    padding: 0;
+    padding-right: 3%;
     &__desc {
       width: 92%;
       height:250px;
+      margin-left: 10px;
       top: 350px;
     }
   }
 
+  .navbar__title {
+    padding-left: 10px;
+  }
+  .display__menu {
+    display: block;
+    align-self: center;
+    justify-self: end;
+  }
+
   .navbar__menu {
     display: none;
+  }
+
+  .navbar__menu--display {
+    align-items: center;
+    background-color: variables.$bg-black;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    & div {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    & div a {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+
+  .icon-close,
+  .navbar__menu::before {
+    position: absolute;
+    top: 20px;
+  }
+
+
+  .navbar__menu::before {
+    content: 'LoopStudios';
+    font-size: 20px;
+    left: 20px;
+  }
+
+  .icon-close {
+    position: absolute;
+    z-index: 10;
+    right: 20px;
   }
 }

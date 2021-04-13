@@ -3,8 +3,12 @@ include ./utils/variables.pug
 header.header 
     div.header__navbar 
         h1.navbar__title LoopStudios
+        img.display__menu#displayMenu(
+            src = "./assets/icons/icon-hamburger.svg"
+        )
         section.navbar__menu
-            each item in menuItems 
-                a(href = '#' + item)= item 
+            div
+                each item in menuItems 
+                    a(href = '#' + item)= item 
     div.header__desc
         p.desc__text imersive experiences that deliver
