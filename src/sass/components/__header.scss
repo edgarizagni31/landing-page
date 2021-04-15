@@ -78,6 +78,7 @@
   .navbar__title {
     padding-left: 10px;
   }
+
   .display__menu {
     display: block;
     align-self: center;
@@ -93,9 +94,9 @@
     background-color: variables.$bg-black;
     display: flex;
     justify-content: center;
+    height: 100%;
     position: absolute;
     top: 0;
-    height: 100%;
     width: 100%;
     z-index: 2;
     & div {
@@ -105,8 +106,8 @@
     
     & div a {
       margin-bottom: 30px;
-      text-align: center;
       font-size: 25px;
+      text-align: center;
     }
   }
 

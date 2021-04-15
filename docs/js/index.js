@@ -1,6 +1,6 @@
 "use strict";
 
-displayMenu.addEventListener('touchstart', handleMenu);
+displayMenu.addEventListener('click', handleMenu);
 
 function handleMenu() {
   var displayMenu = document.getElementById("displayMenu");

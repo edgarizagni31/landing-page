@@ -1,4 +1,4 @@
-displayMenu.addEventListener('touchstart', handleMenu);
+displayMenu.addEventListener('click', handleMenu);
 
 function handleMenu() {
   const displayMenu = document.getElementById("displayMenu");
