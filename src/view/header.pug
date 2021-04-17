@@ -1,14 +1,14 @@
 include ./utils/variables.pug
 
 header.header 
-    div.header__navbar.animate__animated 
-        h1.navbar__title LoopStudios
-        img.display__menu#displayMenu(
+    nav.header__navbar 
+        h1.header__title LoopStudios
+        img.header__display-menu#displayMenu(
             src = "./assets/icons/icon-hamburger.svg"
         )
-        section.navbar__menu
+        section.header__menu
             div
                 each item in menuItems 
-                    a(href = '#' + item)= item 
-    div.header__desc
-        p.desc__text imersive experiences that deliver
+                    a.header__menu-items(href = '#' + item)= item 
+    section.header__desc
+        p.header__text imersive experiences that deliver

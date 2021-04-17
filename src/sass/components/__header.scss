@@ -5,7 +5,7 @@
     image: url(./assets/images/desktop/image-hero.jpg);
     origin: border-box;
     repeat: no-repeat;
-    size: cover; 
+    size: cover;
   }
   color: variables.$color-text;
   height: 100vh;
@@ -22,6 +22,33 @@
     width: 100%;
   }
 
+  &__title {
+    font-size: 32px;
+    text-transform: lowercase;
+    margin: 0;
+  }
+
+  &__display-menu {
+    display: none;
+  }
+
+  &__menu {
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-bottom: 7px;
+  }
+
+  &__menu-items {
+    color: variables.$color-text;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 10px;
+    text: {
+      decoration: none;
+      transform: capitalize;
+    }
+  }
+
   &__desc {
     border: 1px solid variables.$color-text;
     font: {
@@ -36,60 +63,42 @@
   }
 }
 
-.display__menu {
-  display: none;
-}
-
-.navbar__title {
-  font-size: 32px;
-  margin: 0;
-}
-
-.navbar__menu {
-  a {
-    color: variables.$color-text;
-    display: inline-block;
-    font-size: 16px;
-    margin-right: 10px;
-    text: {
-      decoration: none;
-      transform: capitalize;
-    }
-  }
-  align-self: flex-end;
-  justify-self: flex-end;
-  margin-bottom: 7px;
-}
-
-
 @media screen and (max-width: 440px) {
   .header {
     background-image: url(./assets/images/mobile/image-hero.jpg);
     padding: 0;
     padding-right: 3%;
+    padding-top: 3%;
+
+    &__title {
+      font-size: 20px;
+      padding-left: 10px;
+    }
+
+    &__display-menu {
+      display: block;
+      align-self: center;
+      justify-self: end;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__menu-items {
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
     &__desc {
       width: 92%;
-      height:250px;
+      height: 250px;
       margin-left: 10px;
       top: 350px;
     }
   }
 
-  .navbar__title {
-    padding-left: 10px;
-  }
-
-  .display__menu {
-    display: block;
-    align-self: center;
-    justify-self: end;
-  }
-
-  .navbar__menu {
-    display: none;
-  }
-
-  .navbar__menu--display {
+  .header__menu--display {
     align-items: center;
     background-color: variables.$bg-black;
     display: flex;
@@ -103,30 +112,21 @@
       display: flex;
       flex-direction: column;
     }
-    
-    & div a {
-      margin-bottom: 30px;
-      font-size: 25px;
-      text-align: center;
-    }
   }
 
   .icon-close,
-  .navbar__menu::before {
+  .header__title--menu {
     position: absolute;
     top: 20px;
+    z-index: 10;
   }
 
 
-  .navbar__menu::before {
-    content: 'LoopStudios';
-    font-size: 20px;
+  .header__title--menu {
     left: 20px;
   }
 
   .icon-close {
-    position: absolute;
-    z-index: 10;
     right: 20px;
   }
 }

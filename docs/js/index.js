@@ -1,10 +1,10 @@
 "use strict";
 
+var displayMenu = document.getElementById("displayMenu");
 displayMenu.addEventListener('click', handleMenu);
 
 function handleMenu() {
-  var displayMenu = document.getElementById("displayMenu");
-  var menu = document.querySelector(".navbar__menu");
+  var menu = document.querySelector(".header__menu");
 
   if (!displayMenu.classList.contains('icon-close')) {
     displayMenu.classList.add("icon-close");
@@ -15,5 +15,6 @@ function handleMenu() {
   }
 
   ;
-  menu.classList.toggle("navbar__menu--display");
+  menu.classList.toggle("header__menu--display");
+  document.querySelector('.header__title').classList.toggle("header__title--menu");
 }
