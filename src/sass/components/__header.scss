@@ -2,7 +2,7 @@
 
 .header {
   background: {
-    image: url(./assets/images/desktop/image-hero.jpg);
+    image: url("./assets/images/desktop/image-hero.jpg");
     origin: border-box;
     repeat: no-repeat;
     size: cover;
@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 440px) {
   .header {
-    background-image: url(./assets/images/mobile/image-hero.jpg);
+    background-image: url("./assets/images/mobile/image-hero.jpg");
     padding: 0;
     padding-right: 3%;
     padding-top: 3%;
