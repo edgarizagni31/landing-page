@@ -10,8 +10,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname,'dist'),
-        filename: 'index.js',
-        assetModuleFilename: "assets/images/[hash][ext]"
+        filename: '[name].[contenthash].js',
+        assetModuleFilename: "assets/images/[hash][ext][query]"
     },
     resolve: {
         extensions: ['.js']
@@ -41,7 +41,7 @@ module.exports = {
                         name: '[name].[contenthash].[ext]',
                         outputPath: './assets/fonts/',
                         publicPath: '../assets/fonts/',
-                        esModule: true,
+                        esModule: false,
                     }
                 } 
             }
