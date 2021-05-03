@@ -52,7 +52,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: true,
             template: './public/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            minify: {
+                removeAttributeQuotes: true,
+                removeComments: true,
+                collapseWhitespace: true
+            }
         }),
         new MiniExtractCssPlugin({
             filename: './styles.[contenthash].css'
