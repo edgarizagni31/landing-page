@@ -40,7 +40,7 @@ module.exports = {
                         mimetype: 'application/font-ttf',
                         name: '[name].[contenthash].[ext]',
                         outputPath: './assets/fonts/',
-                        publicPath: '../assets/fonts/',
+                        publicPath: './assets/fonts/',
                         esModule: false,
                     }
                 } 
