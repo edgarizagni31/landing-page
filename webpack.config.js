@@ -40,7 +40,7 @@ module.exports = {
                         mimetype: 'application/font-ttf',
                         name: '[name].[contenthash].[ext]',
                         outputPath: './assets/fonts/',
-                        publicPath: './assets/fonts/',
+                        publicPath: '../assets/fonts/',
                         esModule: true,
                     }
                 } 
@@ -55,7 +55,7 @@ module.exports = {
             filename: 'index.html'
         }),
         new MiniExtractCssPlugin({
-            filename: './styles.css'
+            filename: './styles.[contenthash].css'
         }),
         new copyWebpackPlugin({
             patterns: [

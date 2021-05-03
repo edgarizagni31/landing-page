@@ -1,4 +1,4 @@
-require('./styles.css');
+import './styles.css';
 
 const displayMenu = document.getElementById('displayMenu');
 const classListDisplayMenu = displayMenu.classList;
