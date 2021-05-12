@@ -1,5 +1,6 @@
 #project info
 design/
 style-guide.md
+dist/
 
 node_modules/
