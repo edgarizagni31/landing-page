@@ -2,7 +2,6 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniExtractCssPlugin = require('mini-css-extract-plugin');
-const copyWebpackPlugin = require('copy-webpack-plugin');
 const CssMinimizer = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -16,20 +15,42 @@ module.exports = {
     resolve: {
         extensions: ['.js']
     },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'dist/'),
+        compress: true,
+        port: 3000
+
+    },
+    mode: 'production',
     module: {
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: ['babel-loader']
+                test: /\.pug$/,
+                use: [
+                    'html-loader', 
+                    'pug-html-loader'
+                ]
             },
             {
-                test: /\.css$/,
-                use: [ MiniExtractCssPlugin.loader, 'css-loader']
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniExtractCssPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
             },
             {
                 test: /\.jpg$/,
                 type: 'asset/resource'
+            },
+            {
+                test: /\.svg/,
+                type: 'asset/inline'
             },
             {
                 test: /\.ttf$/,
@@ -51,7 +72,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             inject: true,
-            template: './public/index.html',
+            template: './src/view/index.pug',
             filename: 'index.html',
             minify: {
                 removeAttributeQuotes: true,
@@ -62,18 +83,6 @@ module.exports = {
         new MiniExtractCssPlugin({
             filename: './styles.[contenthash].css'
         }),
-        new copyWebpackPlugin({
-            patterns: [
-                {
-                    from: path.resolve(__dirname, 'src', 'assets/images'),
-                    to: 'assets/images'
-                },
-                {
-                    from: path.resolve(__dirname,'src','assets/icons'),
-                    to: 'assets/icons'
-                }
-            ]
-        })
     ],
     optimization: {
         minimize: true,
