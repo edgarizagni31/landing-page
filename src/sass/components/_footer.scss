@@ -1,14 +1,11 @@
-@use '../utils/_variables' as variables;
-
 .footer {
-  background-color: variables.$bg-black;
-  color: variables.$color-text;
+  background-color: $bg-black;
+  color: $color-text;
   display: grid;
   grid-template: {
     columns: repeat(2,1fr);
     rows: repeat(2,1fr);
   }
-  height: 100px;
   padding: {
     left: 120px;
     right: 2%;
@@ -19,7 +16,7 @@
 
 .footer__menu {
   a {
-    color: variables.$color-text;
+    color: $color-text;
     margin-right: 20px;
     text-decoration: none;
     text-transform: capitalize;
@@ -47,7 +44,7 @@
   grid-row: 2/-1;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 596px) {
   .footer {
     display: block;
     min-height: 300px;

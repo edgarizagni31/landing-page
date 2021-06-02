@@ -1,24 +1,21 @@
-@use '../utils/_variables' as variables;
-
 .header {
   background: {
-    image: url("./assets/images/desktop/image-hero.jpg");
+    image: url(../assets/images/desktop/image-hero.jpg);
     origin: border-box;
     repeat: no-repeat;
     size: cover;
   }
-  color: variables.$color-text;
+  color: $color-text;
   height: 100vh;
   padding: {
     top: 30px;
     left: 2%;
-    right: 2%;
   }
   position: relative;
 
   &__navbar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
     width: 100%;
   }
 
@@ -39,7 +36,7 @@
   }
 
   &__menu-items {
-    color: variables.$color-text;
+    color: $color-text;
     display: inline-block;
     font-size: 16px;
     margin-right: 10px;
@@ -50,22 +47,36 @@
   }
 
   &__desc {
-    border: 1px solid variables.$color-text;
-    font: {
-      size: 45px;
-      family: "Josefin Sans", sans-serif;
-    }
-    padding: 20px;
-    position: absolute;
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  
+  &__text {
+    font-size: 2.8125rem;
+    margin: 0;
     text-transform: uppercase;
-    top: 250px;
-    width: 400px;
   }
 }
 
-@media screen and (max-width: 440px) {
+.header__desc div {
+  border: 1px solid $color-text;
+  padding: 1.25rem;
+  width: 400px;
+}
+
+@media screen and (min-width: 596px) and (max-width:786px){
   .header {
-    background-image: url("./assets/images/mobile/image-hero.jpg");
+    background-position: center;
+  } 
+}
+
+@media screen and (max-width: 596px) {
+  .header {
+    background-image: url(../assets/images/mobile/image-hero.jpg);
     padding: 0;
     padding-right: 3%;
     padding-top: 3%;
@@ -90,17 +101,22 @@
       text-align: center;
       margin-bottom: 20px;
     }
+
     &__desc {
-      width: 92%;
-      height: 250px;
+      width: 97%;
       margin-left: 10px;
-      top: 350px;
     }
+
+  }
+
+  .header__desc div {
+    width: 92%;
+    padding: 2px;
   }
 
   .header__menu--display {
     align-items: center;
-    background-color: variables.$bg-black;
+    background-color: $bg-black;
     display: flex;
     justify-content: center;
     height: 100%;

@@ -1,7 +1,9 @@
-@use './utils/_fonts';
-@use './base/_nomalize';
-@use './base/_base';
-@use './components/_header';
-@use './components/_about';
-@use './components/_creations';
-@use './components/_footer';
+@import './base/nomalize';
+@import './utils/fonts';
+@import './utils/variables';
+@import './base/base';
+
+@import './components/header';
+@import './components/about';
+@import './components/creations';
+@import './components/footer';
