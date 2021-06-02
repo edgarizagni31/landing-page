@@ -4,7 +4,7 @@ header.header
     nav.header__navbar 
         h1.header__title LoopStudios
         img.header__display-menu#displayMenu(
-            src = "./assets/icons/icon-hamburger.svg"
+            src = "../assets/icons/icon-hamburger.svg"
             alt = "menu-icon"
         )
         section.header__menu
@@ -12,4 +12,5 @@ header.header
                 each item in menuItems 
                     a.header__menu-items(href = '#' + item)= item 
     section.header__desc
-        p.header__text imersive experiences that deliver
+        div
+            p.header__text imersive experiences that deliver
