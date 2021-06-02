@@ -1,4 +1,7 @@
-import './styles.css';
+import './sass/main.scss';
+
+import iconOpen from './assets/icons/icon-hamburger.svg';
+import iconClose from './assets/icons/icon-close.svg';
 
 const displayMenu = document.getElementById('displayMenu');
 
@@ -19,10 +22,10 @@ function handleMenu() {
 
   if ( !classListDisplayMenu.contains('icon-close') ) {
     classListDisplayMenu.add('icon-close');
-    displayMenu.setAttribute('src', `${pathAssets}/icon-close.svg`);
+    displayMenu.setAttribute('src', iconClose);
   }else {
     classListDisplayMenu.remove('icon-close');
-    displayMenu.setAttribute("src", `${pathAssets}/icon-hamburger.svg`);
+    displayMenu.setAttribute("src", iconOpen);
   }
   document.querySelector('.header__menu').classList.toggle("header__menu--display");
   document.querySelector('.header__title').classList.toggle("header__title--menu");
