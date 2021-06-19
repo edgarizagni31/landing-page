@@ -13,6 +13,6 @@ Para el deploy de la página use webpack para optimizar todo de la mejor manera.
 
 ## Uso
 
-Use 'npm install' para instalar dependencias del proyecto.  
-Use 'npm run pug' para convertir a codigo HTML valido.  
-Use 'npm run sass' para convertir a codigo CSS valido.  
+Use `npm install` para instalar dependencias del proyecto.  
+Use `npm run pug` para convertir a codigo HTML valido.  
+Use `npm run sass` para convertir a codigo CSS valido.  
