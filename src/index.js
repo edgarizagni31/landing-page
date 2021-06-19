@@ -11,6 +11,7 @@ function init() {
   const menuItems = document.querySelectorAll('.header__menu-items');
 
   displayMenu.addEventListener('click', handleMenu); 
+
   menuItems.forEach(menuItem => {
     menuItem.addEventListener('click', handleMenuItem);
   });
@@ -18,7 +19,6 @@ function init() {
 
 function handleMenu() {
   const classListDisplayMenu = displayMenu.classList;
-  const pathAssets = './assets/icons/'; 
 
   if ( !classListDisplayMenu.contains('icon-close') ) {
     classListDisplayMenu.add('icon-close');
@@ -27,6 +27,7 @@ function handleMenu() {
     classListDisplayMenu.remove('icon-close');
     displayMenu.setAttribute("src", iconOpen);
   }
+
   document.querySelector('.header__menu').classList.toggle("header__menu--display");
   document.querySelector('.header__title').classList.toggle("header__title--menu");
 }
